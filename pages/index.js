@@ -6,7 +6,6 @@ import Section from '../components/Section';
 import { format } from 'date-fns';
 import { TODAY_DATE, MY_IMAGE } from '../config/SOCIAL_MEDIA';
 export default function Home() {
-  const todayDate = format(new Date(), 'dd LLLL yyyy');
   const title = 'Home';
 
   return (

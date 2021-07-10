@@ -1,4 +1,5 @@
 import { Box, Container, Text, Flex, Image, Button, SimpleGrid } from '@chakra-ui/react';
+import Link from 'next/link';
 import Layout from '../components/Layout';
 import Landing from '../components/Landing';
 import TodaysDate from '../components/TodaysDate';
@@ -10,12 +11,8 @@ export default function Work({ data }) {
   const { url } = data[0].mainImage.asset;
   const pageTitle = 'Work';
 
-  const { title, excerpt, date } = data[0];
+  const { title, excerpt, date, hex, target } = data[0];
   console.log(data);
-
-  const newDataWithoutFirstItem = data.slice(1, data.length - 1);
-
-  console.log(newDataWithoutFirstItem);
 
   return (
     <Layout>
@@ -32,11 +29,7 @@ export default function Work({ data }) {
 
         <Box w="100%" h="auto" borderBottom="2px" pb="50px" mb="50px">
           <Flex direction={{ base: 'column', md: 'row  ' }} mt="100px">
-            <Flex
-              h="300px"
-              w="100%"
-              bgGradient="linear(to-r, #3a7bd5, #3a6073)"
-              borderLeftRadius="20px">
+            <Flex h="300px" w="100%" bgGradient={`linear(to-r,${hex})`} borderLeftRadius="20px">
               <Box mx="auto" my="auto">
                 <Image src={url} alt="" boxSize="320px" objectFit="contain" />
               </Box>
@@ -51,7 +44,9 @@ export default function Work({ data }) {
                 </Text>
                 <Flex mt="30px" justify="space-between">
                   <Text>{date}</Text>
-                  <Button colorScheme="blue">See Live</Button>
+                  <Link href={target}>
+                    <Button colorScheme="blue">See Live</Button>
+                  </Link>
                 </Flex>
               </Box>
             </Flex>
@@ -59,9 +54,11 @@ export default function Work({ data }) {
 
           <SimpleGrid columns={[1, null, 3]} spacing="40px" mt="50px">
             {data.map((item, index) => {
-              const { title, excerpt, mainImage, date } = item;
+              const { title, excerpt, mainImage, date, hex, target } = item;
               return (
                 <WorkItem
+                  hex={hex}
+                  target={target}
                   title={title}
                   excerpt={excerpt}
                   mainImage={mainImage}
@@ -82,6 +79,8 @@ export async function getServerSideProps() {
     title,
     excerpt,
     date,
+    target,
+    hex,
     mainImage{
       asset->{
         id,

@@ -19,6 +19,16 @@ export default {
       type: 'string'
     },
     {
+      name: 'target',
+      title: 'Target',
+      type: 'string'
+    },
+    {
+      name: 'hex',
+      title: 'Hex',
+      type: 'string'
+    },
+    {
       name: 'mainImage',
       title: 'Main image',
       type: 'image',

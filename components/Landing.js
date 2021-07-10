@@ -1,7 +1,6 @@
 import { Box, Text, SimpleGrid, Flex } from '@chakra-ui/react';
 import Image from 'next/image';
 import Fade from 'react-reveal/Fade';
-import { MY_IMAGE } from '../config/SOCIAL_MEDIA';
 
 export default function Landing({ image }) {
   return (
