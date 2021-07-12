@@ -1,4 +1,4 @@
-import React from 'react';
+import { Fragment } from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -19,7 +19,7 @@ export default function Layout({ title, keywords, description, children }) {
 
       <Header />
 
-      <main>{children}</main>
+      <>{children}</>
 
       <Footer />
       <Copyright todayDate={todayDate} />
