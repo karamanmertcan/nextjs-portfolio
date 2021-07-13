@@ -1,6 +1,6 @@
 import { Box, Container, Flex, Text, SimpleGrid } from '@chakra-ui/react';
 import Link from 'next/link';
-import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 import SocialShare from './SocialShare';
 
 export default function Footer() {

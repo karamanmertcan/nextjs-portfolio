@@ -2,7 +2,7 @@ import { Box, Text, SimpleGrid, Flex, Container, Button, Image } from '@chakra-u
 import Fade from 'react-reveal/Fade';
 import Layout from '../components/Layout';
 import Link from 'next/link';
-import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function About() {
   return (

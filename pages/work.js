@@ -10,6 +10,8 @@ import Fade from 'react-reveal/Fade';
 
 export default function Work({ data }) {
   const { url } = data[0].mainImage.asset;
+  console.log(url);
+
   const pageTitle = 'Work';
 
   const { title, excerpt, date, hex, target } = data[0];
@@ -33,7 +35,7 @@ export default function Work({ data }) {
           <Flex direction={{ base: 'column', md: 'row  ' }} mt="100px">
             <Flex h="300px" w="100%" bgGradient={`linear(to-r,${hex})`} borderLeftRadius="20px">
               <Box mx="auto" my="auto">
-                <Image src={url} alt="" boxSize="320px" objectFit="contain" />
+                <Image src={url + '?h=200&w=200'} alt="" boxSize="320px" objectFit="contain" />
               </Box>
             </Flex>
             <Flex h="300px" w="100%" bg="gray.200" borderRightRadius="20px">

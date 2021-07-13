@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Layout from '../components/Layout';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -14,8 +13,7 @@ import {
   Button,
   Textarea,
   FormControl,
-  FormLabel,
-  FormErrorMessage
+  FormLabel
 } from '@chakra-ui/react';
 import { useFormik } from 'formik';
 

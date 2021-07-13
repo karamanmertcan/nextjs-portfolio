@@ -1,5 +1,5 @@
 import Layout from '../components/Layout';
-import { Flex, Text, Box, Center } from '@chakra-ui/react';
+import { Flex, Text } from '@chakra-ui/react';
 
 export default function NotFoundPage() {
   return (

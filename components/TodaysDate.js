@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { Flex, Box, Text, Spacer } from '@chakra-ui/react';
 
 export default function TodaysDate({ todayDate, title }) {

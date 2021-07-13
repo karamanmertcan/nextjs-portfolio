@@ -3,7 +3,6 @@ import TodaysDate from '../components/TodaysDate';
 import Landing from '../components/Landing';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
-import { format } from 'date-fns';
 import { TODAY_DATE, MY_IMAGE } from '../config/SOCIAL_MEDIA';
 export default function Home() {
   const title = 'Home';

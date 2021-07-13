@@ -10,7 +10,7 @@ export default function WorkItem({ title, excerpt, mainImage, date, hex, target 
       <Flex direction={{ base: 'column' }} mt="60px" boxShadow="2xl">
         <Flex h="300px" w="100%" bgGradient={`linear(to-r, ${hex} ) `} borderTopRadius="20px">
           <Box mx="auto" my="auto">
-            <Image src={url} alt="" boxSize="320px" objectFit="contain" />
+            <Image src={url + '?h=200&w=200'} alt="" boxSize="320px" objectFit="contain" />
           </Box>
         </Flex>
         <Flex h="auto" w="100%" bg="gray.200">
