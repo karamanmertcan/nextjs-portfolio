@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Fade from 'react-reveal/Fade';
 import {
   Flex,
@@ -24,8 +26,32 @@ export default function Contact() {
       email: '',
       message: ''
     },
-    onSubmit: values => {
-      console.log(JSON.stringify(values, null, 1));
+    onSubmit: async values => {
+      try {
+        if (values.email === '' || values.message === '' || values.name === '') {
+          toast.error('You have to fill the empty fields');
+        } else {
+          await fetch('http://localhost:3001/send', {
+            method: 'POST',
+            headers: {
+              'Content-type': 'application/json'
+            },
+            body: JSON.stringify({ values })
+          })
+            .then(res => res.json())
+            .then(async res => {
+              const resData = await res;
+
+              if (resData.status !== 'success') {
+                toast.error('Something went wrong!!!');
+              } else {
+                toast.success('Mail Sent Successfully');
+              }
+            });
+        }
+      } catch (err) {
+        console.log(err.message);
+      }
     }
   });
 
@@ -33,6 +59,7 @@ export default function Contact() {
     <Layout>
       <Container maxW="container.xl">
         <Box h="auto" w="100%" borderBottom="2px" py="5rem">
+          <ToastContainer />
           <SimpleGrid columns={[1, null, 2]} spacing="40px">
             <Fade left>
               <Box
@@ -42,40 +69,19 @@ export default function Contact() {
                 ml={{ base: '0', md: '30px' }}
                 textAlign={{ base: 'center', md: 'left', lg: 'left' }}>
                 <Text fontSize="6xl" fontWeight="700">
-                  About Me
+                  Contact
                 </Text>
 
-                <Text fontSize="xl" mt="10px">
-                  Hello, my name is Mertcan. I'm bachelor student in Kadir Has University. My
-                  department is Computer Engineering .I'm in 2nd grade . My Gpa is 3.14 . I'm very
-                  passionate about web development. I know HTML5, CSS , JS , Bootstrap,React JS ,
-                  Node JS, Mongo DB , Express .I’m interested in these technologies.
+                <Text fontSize="xl" fontWeight="200" pt="50px">
+                  I am always waiting for a message from you. I would be happy to hear from you for
+                  an interview and a possible job offer. Or you can just talk to me. Don't hesitate
+                  to contact me.
                 </Text>
-
-                <Text fontSize="xl" mt="20px">
-                  I love learn new things and i am very curious . I want to improve myself in this
-                  technologies .Also , i can use Photoshop 2020 and Adobe Xd
-                </Text>
-
-                <Text fontSize="xl" mt="20px">
-                  I want to move MERN Stack technologies and MEVN Stack technologies . I'm trying to
-                  imporve myself everyday in these technologies. Also, I'm a hardworking person and
-                  teamwork player.I'm very open minded for new ideas and new techologies.
-                </Text>
-                <Button colorScheme="blue" mt="10px">
-                  <a href="/cv/MertcanKaramanCV.pdf" download>
-                    Resume
-                  </a>
-                </Button>
               </Box>
             </Fade>
 
             <Fade right>
-              <Flex
-                w="100%"
-                pt="150px"
-                height="100%"
-                display={{ base: 'none', md: 'inline-block' }}>
+              <Flex w="100%" pt="90px" height="100%" display={{ base: 'none', md: 'inline-block' }}>
                 <Flex align="center" justify="center">
                   <Image src={`/images/videoconference.svg`} height={500} width={400} />
                 </Flex>
@@ -131,7 +137,6 @@ export default function Contact() {
                   <FormLabel>Message </FormLabel>
 
                   <Textarea
-                    required
                     placeholder="Message"
                     h="100%"
                     id="message"

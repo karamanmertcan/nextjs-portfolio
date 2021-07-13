@@ -25,24 +25,24 @@ export default function Footer() {
                 </Text>
               </a>
             </Link>
-            <Link href="/">
+            <Link href="/about">
               <a>
                 <Text color="gray.500" fontWeight="bold" fontSize="lg" mr="20px">
                   About
                 </Text>
               </a>
             </Link>
-            <Link href="/">
+            <Link href="/work">
               <a>
                 <Text color="gray.500" fontWeight="bold" fontSize="lg" mr="20px">
                   Work
                 </Text>
               </a>
             </Link>
-            <Link href="/">
+            <Link href="/contact">
               <a>
                 <Text color="gray.500" fontWeight="bold" fontSize="lg" mr="20px">
-                  About
+                  Contact
                 </Text>
               </a>
             </Link>

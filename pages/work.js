@@ -6,26 +6,28 @@ import TodaysDate from '../components/TodaysDate';
 import WorkItem from '../components/WorkItem';
 import { TODAY_DATE, REACT_SVG } from '../config/SOCIAL_MEDIA';
 import sanityClient from '../client.js';
+import Fade from 'react-reveal/Fade';
 
 export default function Work({ data }) {
   const { url } = data[0].mainImage.asset;
   const pageTitle = 'Work';
 
   const { title, excerpt, date, hex, target } = data[0];
-  console.log(data);
 
   return (
     <Layout>
       <Container maxW="container.xl">
-        <Landing image={REACT_SVG} />
-        <TodaysDate title={pageTitle} todayDate={TODAY_DATE} />
-        <Box w="100%" h="auto">
-          <Flex justify="center" align="center" direction="column">
-            <Text fontSize="6xl" fontWeight="bold">
-              Work
-            </Text>
-          </Flex>
-        </Box>
+        <Fade>
+          <Landing image={REACT_SVG} />
+          <TodaysDate title={pageTitle} todayDate={TODAY_DATE} />
+          <Box w="100%" h="auto">
+            <Flex justify="center" align="center" direction="column">
+              <Text fontSize="6xl" fontWeight="bold">
+                Work
+              </Text>
+            </Flex>
+          </Box>
+        </Fade>
 
         <Box w="100%" h="auto" borderBottom="2px" pb="50px" mb="50px">
           <Flex direction={{ base: 'column', md: 'row  ' }} mt="100px">
@@ -42,7 +44,7 @@ export default function Work({ data }) {
                 <Text color="black" fontSize="lg" fontWeight="200" mt="20px">
                   {excerpt}
                 </Text>
-                <Flex mt="30px" justify="space-between">
+                <Flex mt="30px" justify="space-between" color="black">
                   <Text>{date}</Text>
                   <Link href={target}>
                     <Button colorScheme="blue">See Live</Button>
@@ -74,7 +76,7 @@ export default function Work({ data }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const data = await sanityClient.fetch(`*[_type == "post"]{
     title,
     excerpt,
