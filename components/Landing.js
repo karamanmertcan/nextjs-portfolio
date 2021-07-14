@@ -11,7 +11,7 @@ export default function Landing({ image }) {
             w="100%"
             h="auto"
             mt="25%"
-            ml="30px"
+            ml={{ base: '0', md: '30px' }}
             textAlign={{ base: 'center', md: 'left', lg: 'left' }}>
             <Text fontSize="6xl" fontWeight="700">
               I KEEP ON
@@ -26,7 +26,12 @@ export default function Landing({ image }) {
             </Text>
 
             <Flex justify={{ base: 'center', md: 'start' }} align="center">
-              <Box bgGradient="linear(to-r,#5433ff, #20bdff, #a5fecb)" w="40px" h="5px" mr="10px" />
+              <Box
+                bgGradient="linear(to-r,#5433ff, #20bdff, #a5fecb)"
+                w="40px"
+                h="5px"
+                display={{ base: 'none', md: 'inline-block' }}
+              />
               <Text fontSize="5xl" fontWeight="700">
                 Mertcan Karaman
               </Text>

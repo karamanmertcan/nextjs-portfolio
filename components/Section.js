@@ -71,7 +71,7 @@ export default function Section() {
                 w="100%"
                 h="auto"
                 mt="25%"
-                ml="30px"
+                ml={{ base: '0', md: '30px' }}
                 textAlign={{ base: 'center', md: 'left', lg: 'left' }}>
                 <Text fontSize="5xl" fontWeight="bold">
                   Hi, my name is Mertcan Karaman
@@ -83,6 +83,7 @@ export default function Section() {
                     w="40px"
                     h="5px"
                     mr="10px"
+                    display={{ base: 'none', md: 'inline-block' }}
                   />
                   <Text fontSize="2xl" fontWeight="bold">
                     I am a creative developer who has a great passion for learning engineering.😎
@@ -123,7 +124,7 @@ export default function Section() {
                 w="100%"
                 h="auto"
                 mt="25%"
-                ml="30px"
+                ml={{ base: '0', md: '30px' }}
                 textAlign={{ base: 'center', md: 'left', lg: 'left' }}>
                 <Text fontSize="5xl" fontWeight="bold">
                   I constantly make new productions.
@@ -135,6 +136,7 @@ export default function Section() {
                     w="40px"
                     h="5px"
                     mr="10px"
+                    display={{ base: 'none', md: 'inline-block' }}
                   />
                   <Text fontSize="2xl" fontWeight="bold">
                     I'm working steadily for improving my self eveyday.I love learning a lot of
@@ -190,7 +192,7 @@ export default function Section() {
                 w="100%"
                 h="auto"
                 mt="25%"
-                ml="30px"
+                ml={{ base: '0', md: '30px' }}
                 textAlign={{ base: 'center', md: 'left', lg: 'left' }}>
                 <Text fontSize="5xl" fontWeight="bold">
                   Don't hesitate to contact me.
@@ -202,6 +204,7 @@ export default function Section() {
                     w="40px"
                     h="5px"
                     mr="10px"
+                    display={{ base: 'none', md: 'inline-block' }}
                   />
                   <Text fontSize="2xl" fontWeight="bold">
                     I am always waiting for a message from you. I would be so happy to hear from you
@@ -209,7 +212,7 @@ export default function Section() {
                   </Text>
                 </Flex>
                 <Box w="100%" mt="20px">
-                  <Link href="/work">
+                  <Link href="/contact">
                     <a>
                       <Button colorScheme="blue" borderRadius="20px" w="100%">
                         Contact Me

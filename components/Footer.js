@@ -46,7 +46,7 @@ export default function Footer() {
                 </Text>
               </a>
             </Link>
-            <Link href="/">
+            <Link href="https://mecox-blog.netlify.app/">
               <a>
                 <Text color="gray.500" fontWeight="bold" fontSize="lg">
                   Blog

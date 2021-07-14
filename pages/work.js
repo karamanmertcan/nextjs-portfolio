@@ -17,7 +17,7 @@ export default function Work({ data }) {
   const { title, excerpt, date, hex, target } = data[0];
 
   return (
-    <Layout>
+    <Layout title="Work || Mertcankaraman.com">
       <Container maxW="container.xl">
         <Fade>
           <Landing image={REACT_SVG} />
@@ -33,12 +33,16 @@ export default function Work({ data }) {
 
         <Box w="100%" h="auto" borderBottom="2px" pb="50px" mb="50px">
           <Flex direction={{ base: 'column', md: 'row  ' }} mt="100px">
-            <Flex h="300px" w="100%" bgGradient={`linear(to-r,${hex})`} borderLeftRadius="20px">
+            <Flex
+              h="auto"
+              w="100%"
+              bgGradient={`linear(to-r,${hex})`}
+              borderLeftRadius={{ base: '0', md: '20px' }}>
               <Box mx="auto" my="auto">
                 <Image src={url + '?h=200&w=200'} alt="" boxSize="320px" objectFit="contain" />
               </Box>
             </Flex>
-            <Flex h="300px" w="100%" bg="gray.200" borderRightRadius="20px">
+            <Flex h="auto" w="100%" bg="gray.200" borderRightRadius={{ base: '0', md: '20px' }}>
               <Box p="50px">
                 <Text color="black" fontSize="3xl" fontWeight="bold">
                   {title}
@@ -56,7 +60,7 @@ export default function Work({ data }) {
             </Flex>
           </Flex>
 
-          <SimpleGrid columns={[1, null, 3]} spacing="40px" mt="50px">
+          <SimpleGrid columns={[1, 2, 3]} spacing="40px" mt="50px">
             {data.map((item, index) => {
               const { title, excerpt, mainImage, date, hex, target } = item;
               return (

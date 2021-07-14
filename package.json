@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "next start ",
-    "lint": "next lint"
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.4",
@@ -32,8 +31,5 @@
     "react-share": "^4.4.0",
     "react-toastify": "^7.0.4"
   },
-  "devDependencies": {
-    "eslint": "7.30.0",
-    "eslint-config-next": "11.0.1"
-  }
+  "devDependencies": {}
 }

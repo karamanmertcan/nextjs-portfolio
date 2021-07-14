@@ -6,7 +6,7 @@ import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function About() {
   return (
-    <Layout>
+    <Layout title="About || Mertcankaraman.com">
       <Container maxW="container.xl">
         <Box h="auto" w="100%" borderBottom="2px" py="5rem">
           <SimpleGrid columns={[1, null, 2]} spacing="40px">
@@ -15,7 +15,7 @@ export default function About() {
                 w="100%"
                 h="auto"
                 mt="25%"
-                ml="30px"
+                ml={{ base: '0', md: '30px' }}
                 textAlign={{ base: 'center', md: 'left', lg: 'left' }}>
                 <Text fontSize="6xl" fontWeight="700">
                   About Me
@@ -129,18 +129,13 @@ export default function About() {
             <Box px="80px" py="50px">
               <Text fontSize="xl" mt="10px">
                 Hello, my name is Mertcan. I'm bachelor student in Kadir Has University. My
-                department is Computer Engineering .I'm in 2nd grade . My Gpa is 3.14 . I'm very
-                passionate about web development. I know HTML5, CSS , JS , Bootstrap,React JS , Node
-                JS, Mongo DB , Express .I’m interested in these technologies.
+                department is Computer Engineering .I'm in 3rd grade . I'm very passionate about web
+                development. I know HTML5, CSS , JS , Bootstrap,Chakra UI,Tailwind Css,Material
+                UI,React JS , Node JS, Mongo DB , Express .I’m interested in these technologies.
               </Text>
 
               <Text fontSize="xl" mt="20px">
-                I love learn new things and i am very curious . I want to improve myself in this
-                technologies .Also , i can use Photoshop 2020 and Adobe Xd
-              </Text>
-
-              <Text fontSize="xl" mt="20px">
-                I want to move MERN Stack technologies and MEVN Stack technologies . I'm trying to
+                I'm keen on MERN Stack technologies and MEVN Stack technologies . I'm trying to
                 imporve myself everyday in these technologies. Also, I'm a hardworking person and
                 teamwork player.I'm very open minded for new ideas and new techologies.
               </Text>
@@ -164,7 +159,7 @@ export default function About() {
             </Text>
 
             <Flex
-              w="75%"
+              w="80%"
               height="auto"
               bg="#FBFBFB"
               direction="column"
@@ -179,102 +174,140 @@ export default function About() {
                 borderTopLeftRadius="15px"
                 borderTopRightRadius="15px"></Box>
 
-              <SimpleGrid columns={[2, null, 6]} spacing="90px" p="30px">
-                <Box h="auto" w="80px" _hover={{ transform: 'scale(1.2)' }}>
+              <SimpleGrid columns={[2, null, 6]} spacing="80px" p="30px">
+                <Box h="auto" w="80px">
                   <Flex direction="column" align="center">
-                    <Text fontWeight="bold">HTML5</Text>
+                    <Text fontWeight="bold" color="black">
+                      HTML5
+                    </Text>
                     <Image src="/images/html.png" boxSize="70px" />
                   </Flex>
                 </Box>
                 <Box h="auto" w="80px">
                   <Flex direction="column" align="center">
-                    <Text fontWeight="bold">CSS</Text>
+                    <Text fontWeight="bold" color="black">
+                      CSS
+                    </Text>
                     <Image src="/images/css.png" boxSize="70px" />
                   </Flex>
                 </Box>
                 <Box h="auto" w="80px">
                   <Flex direction="column" align="center">
-                    <Text fontWeight="bold">Chakra UI</Text>
+                    <Text fontWeight="bold" color="black">
+                      Chakra UI
+                    </Text>
                     <Image src="/images/chakraui.svg" mt="30px" />
                   </Flex>
                 </Box>
                 <Box h="auto" w="80px">
                   <Flex direction="column" align="center">
-                    <Text fontWeight="bold">Materialize </Text>
+                    <Text fontWeight="bold" color="black">
+                      Materialize{' '}
+                    </Text>
                     <Image src="/images/materialize.png" boxSize="70px" />
                   </Flex>
                 </Box>
                 <Box h="auto" w="80px">
                   <Flex direction="column" align="center">
-                    <Text fontWeight="bold">Material </Text>
+                    <Text fontWeight="bold" color="black">
+                      Material{' '}
+                    </Text>
                     <Image src="/images/material-ui.png" boxSize="70px" />
                   </Flex>
                 </Box>
                 <Box h="auto" w="80px">
                   <Flex direction="column" align="center">
-                    <Text fontWeight="bold">Tailwind </Text>
+                    <Text fontWeight="bold" color="black">
+                      Tailwind{' '}
+                    </Text>
                     <Image src="/images/tailwind.svg" boxSize="70px" />
                   </Flex>
                 </Box>
                 <Box h="auto" w="80px">
                   <Flex direction="column" align="center">
-                    <Text fontWeight="bold">Javascript</Text>
+                    <Text fontWeight="bold" color="black">
+                      Javascript
+                    </Text>
                     <Image src="/images/javascript.png" boxSize="70px" />
                   </Flex>
                 </Box>
 
                 <Box h="auto" w="80px">
                   <Flex direction="column" align="center">
-                    <Text fontWeight="bold">React</Text>
+                    <Text fontWeight="bold" color="black">
+                      React
+                    </Text>
                     <Image src="/images/react.png" boxSize="70px" />
                   </Flex>
                 </Box>
                 <Box h="auto" w="80px">
                   <Flex direction="column" align="center">
-                    <Text fontWeight="bold">Next.js</Text>
+                    <Text fontWeight="bold" color="black">
+                      Next.js
+                    </Text>
                     <Image src="/images/next.png" boxSize="70px" />
                   </Flex>
                 </Box>
                 <Box h="auto" w="80px">
                   <Flex direction="column" align="center">
-                    <Text fontWeight="bold">Redux</Text>
+                    <Text fontWeight="bold" color="black">
+                      Redux
+                    </Text>
                     <Image src="/images/redux.png" boxSize="70px" />
                   </Flex>
                 </Box>
                 <Box h="auto" w="80px">
                   <Flex direction="column" align="center">
-                    <Text fontWeight="bold">Node.js</Text>
+                    <Text fontWeight="bold" color="black">
+                      Node.js
+                    </Text>
                     <Image src="/images/nodejs.png" boxSize="70px" />
                   </Flex>
                 </Box>
                 <Box h="auto" w="80px">
                   <Flex direction="column" align="center">
-                    <Text fontWeight="bold">Express</Text>
+                    <Text fontWeight="bold" color="black">
+                      Express
+                    </Text>
                     <Image src="/images/express.png" boxSize="70px" />
                   </Flex>
                 </Box>
                 <Box h="auto" w="80px">
                   <Flex direction="column" align="center">
-                    <Text fontWeight="bold">MongoDb</Text>
+                    <Text fontWeight="bold" color="black">
+                      MongoDb
+                    </Text>
                     <Image src="/images/mongodb.png" boxSize="70px" />
                   </Flex>
                 </Box>
                 <Box h="auto" w="80px">
                   <Flex direction="column" align="center">
-                    <Text fontWeight="bold">Firebase</Text>
+                    <Text fontWeight="bold" color="black">
+                      Firebase
+                    </Text>
                     <Image src="/images/firebase.png" boxSize="70px" />
                   </Flex>
                 </Box>
                 <Box h="auto" w="80px">
                   <Flex direction="column" align="center">
-                    <Text fontWeight="bold">Sanity</Text>
+                    <Text fontWeight="bold" color="black">
+                      Sanity
+                    </Text>
                     <Image src="/images/sanity.png" boxSize="70px" />
                   </Flex>
                 </Box>
                 <Box h="auto" w="80px">
                   <Flex direction="column" align="center">
-                    <Text fontWeight="bold">Strapi</Text>
-                    <Image src="/images/strapi.png" boxSize="70px" objectFit="contain" />
+                    <Text fontWeight="bold" color="black">
+                      Strapi
+                    </Text>
+                    <Image
+                      src="/images/strapi.png"
+                      boxSize="70px"
+                      objectFit="contain"
+                      h="70px"
+                      w="70px"
+                    />
                   </Flex>
                 </Box>
               </SimpleGrid>

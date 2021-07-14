@@ -54,7 +54,7 @@ export default function Contact() {
   });
 
   return (
-    <Layout>
+    <Layout title="Contact || Mertcankaraman.com">
       <Container maxW="container.xl">
         <Box h="auto" w="100%" borderBottom="2px" py="5rem">
           <ToastContainer />

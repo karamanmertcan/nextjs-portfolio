@@ -18,11 +18,13 @@ export default function Header() {
     <Box boxShadow="xl" w="100%" py={10}>
       <Container maxW="container.xl">
         <Flex align="center" justify={{ base: 'center' }}>
-          <Text fontWeight="700" fontSize="3xl">
-            mertcankaraman.
-          </Text>
+          <Link href="/">
+            <Text fontWeight="700" fontSize="3xl">
+              mertcankaraman.
+            </Text>
+          </Link>
           <Spacer />
-          <Grid templateColumns="repeat(6, 1fr)" gap={6} display={{ base: 'none', md: 'grid' }}>
+          <Grid templateColumns="repeat(6, 1fr)" gap={6} display={{ base: 'none', lg: 'grid' }}>
             <Link href="/">
               <a>
                 <Text fontSize="xl" fontWeight="bold">
