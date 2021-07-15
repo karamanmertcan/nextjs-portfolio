@@ -31,18 +31,19 @@ export default function Work({ data }) {
         </Fade>
 
         <Box w="100%" h="auto" borderBottom="2px" pb="50px" mb="50px">
-          <Flex direction={{ base: 'column', md: 'row  ' }} mt="100px">
+          <Flex direction={{ base: 'column', md: 'row' }} mt="100px">
             <Flex
               h="auto"
               w="100%"
               bgGradient={`linear(to-r,${hex})`}
-              borderLeftRadius={{ base: '0', md: '20px' }}>
+              borderTopRadius={{ base: '20px', md: '0' }}
+              boxShadow="2xl">
               <Box mx="auto" my="auto">
                 <Image src={url + '?h=200&w=200'} alt="" boxSize="320px" objectFit="contain" />
               </Box>
             </Flex>
-            <Flex h="auto" w="100%" bg="gray.200" borderRightRadius={{ base: '0', md: '20px' }}>
-              <Box p="50px">
+            <Flex h="auto" w="100%" bg="gray.200">
+              <Box p={{ base: '20px', md: '50px' }}>
                 <Text color="black" fontSize="3xl" fontWeight="bold">
                   {title}
                 </Text>
