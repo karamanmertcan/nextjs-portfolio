@@ -29,7 +29,7 @@ export default function Contact() {
         if (values.email === '' || values.message === '' || values.name === '') {
           toast.error('You have to fill the empty fields');
         } else {
-          await fetch('http://localhost:3001/send', {
+          await fetch('https://desolate-fjord-88907.herokuapp.com/send', {
             method: 'POST',
             headers: {
               'Content-type': 'application/json'
