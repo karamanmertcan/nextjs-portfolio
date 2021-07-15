@@ -87,7 +87,7 @@ export default function Section() {
                   />
                   <Text fontSize="2xl" fontWeight="bold">
                     I am a creative developer who has a great passion for learning engineering.😎
-                    Currently I work in Tokyo as a software developer. Please find out more!
+                    Currently I work in Istanbul as a software developer. Please find out more!
                   </Text>
                 </Flex>
                 <Box w="100%" mt="20px">
