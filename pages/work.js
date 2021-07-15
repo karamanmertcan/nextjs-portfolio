@@ -10,7 +10,6 @@ import Fade from 'react-reveal/Fade';
 
 export default function Work({ data }) {
   const { url } = data[0].mainImage.asset;
-  console.log(url);
 
   const pageTitle = 'Work';
 
@@ -82,7 +81,7 @@ export default function Work({ data }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const data = await sanityClient.fetch(`*[_type == "post"]{
     title,
     excerpt,
